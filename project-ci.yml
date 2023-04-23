@@ -61,7 +61,7 @@ tasks from 3rd to 11th:
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_ddl.sql" --cat
 
     - echo -e "${LIGHT_RED}>>> Task №4-5 <<<${NO_COLOUR}"
-    - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/cafe_inserts.sql"
+    - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_inserts.sql"
     - echo "Table 'Customer' contains rows:"
     - python3 ${PYPSQL} --sql="SELECT * FROM Customer" --verbose
     - echo "Table 'Restaurants' contains rows:"

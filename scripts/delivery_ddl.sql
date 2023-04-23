@@ -1,7 +1,7 @@
 create schema if not exists workspace;
 set search_path = workspace;
 
-create table if not exists Сustomer (
+create table if not exists Customer (
   Customer_id integer unique primary key, 
   customer_nm text not null, 
   birth_dt date not null

@@ -1,0 +1,9 @@
+DELETE FROM Customer;
+DELETE FROM Restaurants;
+DELETE FROM Shops;
+DELETE FROM Products;
+DELETE FROM Dishes;
+DELETE FROM Favourite_dish_list;
+DELETE FROM Delivery_man;
+DELETE FROM Restaurant_ban_list;
+DELETE FROM Operations;

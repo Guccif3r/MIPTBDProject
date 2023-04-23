@@ -60,14 +60,26 @@ tasks from 3rd to 11th:
     - echo -e "${LIGHT_RED}>>> Task №3 <<<${NO_COLOUR}"
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_ddl.sql" --cat
 
-#     - echo -e "${LIGHT_RED}>>> Task №4-5 <<<${NO_COLOUR}"
-#     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/cafe_inserts.sql"
-#     - echo "Table 'cd.facilities' contains rows:"
-#     - python3 ${PYPSQL} --sql="SELECT * FROM cd.facilities" --verbose
-#     - echo "Table 'cd.members' contains rows:"
-#     - python3 ${PYPSQL} --sql="SELECT * FROM cd.members" --verbose
-#     - echo "Table 'cd.bookings' contains rows:"
-#     - python3 ${PYPSQL} --sql="SELECT * FROM cd.bookings" --verbose
+    - echo -e "${LIGHT_RED}>>> Task №4-5 <<<${NO_COLOUR}"
+    - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/cafe_inserts.sql"
+    - echo "Table 'Customer' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Customer" --verbose
+    - echo "Table 'Restaurants' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Restaurants" --verbose
+    - echo "Table 'Shops' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Shops" --verbose
+    - echo "Table 'Products' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Products" --verbose
+    - echo "Table 'Dishes' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Dishes" --verbose
+    - echo "Table 'Delivery_man' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Delivery_man" --verbose
+    - echo "Table 'Restaurant_ban_list' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Restaurant_ban_list" --verbose
+    - echo "Table 'Favourite_dish_list' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Favourite_dish_list" --verbose
+    - echo "Table 'Operations' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Operations" --verbose
 
 #     - echo -e "${LIGHT_RED}>>> Task №6-7 <<<${NO_COLOUR}"
 #     - SCRIPT_PATH="${SCRIPTS_DIR}/select_count_tables.sql" pytest ${TESTS_DIR}/test_select_count.py

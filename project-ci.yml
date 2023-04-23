@@ -62,8 +62,8 @@ tasks from 3rd to 11th:
 
     - echo -e "${LIGHT_RED}>>> Task №4-5 <<<${NO_COLOUR}"
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_inserts.sql"
-    - echo "Table 'сustomer' contains rows:"
-    - python3 ${PYPSQL} --sql="SELECT * FROM сustomer" --verbose
+    - echo "Table 'Сustomer' contains rows:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM Сustomer" --verbose
     - echo "Table 'Restaurants' contains rows:"
     - python3 ${PYPSQL} --sql="SELECT * FROM Restaurants" --verbose
     - echo "Table 'Shops' contains rows:"

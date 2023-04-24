@@ -17,6 +17,6 @@ def select_df(select_script, sqlalchemy_conn):
 
 def test(select_df):
     assert select_df.query("table_name == 'Customer'")['cnt'].iloc[0] == 3
-#     assert select_df.query("table_name == 'Operations1'")['cnt'].iloc[0] == 2
-#     assert select_df.query("table_name == 'Operations2'")['cnt'].iloc[0] == 5
+    assert select_df.query("table_name == 'Operations1'")['cnt'].iloc[0] == 2
+    assert select_df.query("table_name == 'Operations2'")['cnt'].iloc[0] == 5
     assert select_df.query("table_name == 'Dishes'")['cnt'].iloc[0] == 45

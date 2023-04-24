@@ -17,29 +17,34 @@ UNION ALL
 SELECT
     'Dishes' AS table_name,
     count(*) AS cnt
-FROM Dishes;
-
+FROM Dishes
+UNION ALL
 --Вывести количество тех, кто заказывал TWIX.
-/*
-SELECT DISTINCT
+
+WITH twix AS (SELECT DISTINCT
+    (c.customer_nm)
+    FROM operations
+    INNER JOIN customer c ON c.customer_id = operations.customer_id
+    WHERE Product_id = 13)
+SELECT
     'Operations1' AS table_name,
-    count(c.customer_nm) AS cnt
-FROM operations
-INNER JOIN customer c ON c.customer_id = operations.customer_id
-WHERE Product_id = 13;
-
+    count(*) AS cnt
+FROM twix
 --Вывести количество ресторанов, в которых заказали больше 4 блюд.
-
+UNION ALL
+WITH cntRest AS (SELECT
+    (r.restaurant_nm)
+    FROM Restaurants r
+    INNER JOIN Operations ON Operations.Restaurant_id = r.Restaurant_id
+    GROUP BY r.Restaurant_id
+    HAVING count(*) > 4)
 SELECT
     'Operations2' AS table_name,
-    count(r.restaurant_nm) AS cnt
-FROM Restaurants r
-INNER JOIN Operations ON Operations.Restaurant_id = r.Restaurant_id
-GROUP BY r.Restaurant_id
-HAVING count(*) > 4;
+    count(*) AS cnt
+FROM cntRest;
 
 -- Найти топ три блюда, которые часто заказывались
-
+/*
 SELECT
     d.dish_nm
 FROM
@@ -92,5 +97,4 @@ LEAD(Operations.Dish_id) OVER (PARTITION BY Operations.Restaurant_id ORDER BY Op
 FROM Operations
 INNER JOIN Dishes d ON d.Dishes_id = Operations.Dish_id
 ORDER BY Operations.Dish_id;*/
-
 

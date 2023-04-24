@@ -11,7 +11,7 @@ WITH namesCust AS (SELECT DISTINCT
 SELECT
     'Customer' AS table_name,
     count(*) AS cnt
-FROM namesCust
+FROM namesCust;
 
 
 --Вывести количество тех, кто заказывал TWIX.

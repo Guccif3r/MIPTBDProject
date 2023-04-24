@@ -20,7 +20,7 @@ SELECT
 FROM Dishes;
 
 --Вывести количество тех, кто заказывал TWIX.
-
+/*
 SELECT DISTINCT
     'Operations1' AS table_name,
     count(c.customer_nm) AS cnt

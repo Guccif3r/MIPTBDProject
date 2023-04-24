@@ -2,12 +2,27 @@ SET search_path = workspace;
 
 --Вывести количество заказчиков младше 18 лет
 
-WITH namesCust AS (SELECT DISTINCT
+create view namesCust AS
+    SELECT DISTINCT
                        (customer_nm)
                    FROM Operations
                             INNER JOIN Customer ON Operations.Customer_id = Customer.Customer_id
                    WHERE
-                           Customer.birth_dt > '2005-01-01 00:00:00')
+                           Customer.birth_dt > '2005-01-01 00:00:00';
+
+create view twix AS SELECT DISTINCT
+                        (c.customer_nm)
+                    FROM operations
+                             INNER JOIN customer c ON c.customer_id = operations.customer_id
+                    WHERE Product_id = 13;
+
+create view cntRest AS SELECT
+                           (r.restaurant_nm)
+                       FROM Restaurants r
+                                INNER JOIN Operations ON Operations.Restaurant_id = r.Restaurant_id
+                       GROUP BY r.Restaurant_id
+                       HAVING count(*) > 4;
+
 SELECT
     'Customer' AS table_name,
     count(*) AS cnt
@@ -21,23 +36,13 @@ FROM Dishes
 UNION ALL
 --Вывести количество тех, кто заказывал TWIX.
 
-WITH twix AS (SELECT DISTINCT
-    (c.customer_nm)
-    FROM operations
-    INNER JOIN customer c ON c.customer_id = operations.customer_id
-    WHERE Product_id = 13)
 SELECT
     'Operations1' AS table_name,
     count(*) AS cnt
 FROM twix
 --Вывести количество ресторанов, в которых заказали больше 4 блюд.
 UNION ALL
-WITH cntRest AS (SELECT
-    (r.restaurant_nm)
-    FROM Restaurants r
-    INNER JOIN Operations ON Operations.Restaurant_id = r.Restaurant_id
-    GROUP BY r.Restaurant_id
-    HAVING count(*) > 4)
+
 SELECT
     'Operations2' AS table_name,
     count(*) AS cnt

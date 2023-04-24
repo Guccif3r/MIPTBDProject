@@ -11,13 +11,13 @@ WITH namesCust AS (SELECT DISTINCT
 SELECT
     'Customer' AS table_name,
     count(*) AS cnt
-FROM namesCust;
+FROM namesCust
 UNION ALL
     -- Вывести количество блюд, которые можно заказать
 SELECT
     'Dishes' AS table_name,
     count(*) AS cnt
-FROM Dishes
+FROM Dishes;
 
 --Вывести количество тех, кто заказывал TWIX.
 

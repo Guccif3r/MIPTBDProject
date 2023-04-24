@@ -12,6 +12,13 @@ SELECT
     'Customer' AS table_name,
     count(*) AS cnt
 FROM namesCust;
+UNION ALL
+    -- Вывести количество блюд, которые можно заказать
+SELECT
+    'Dishes' AS table_name,
+    count(*) AS cnt
+FROM Dishes
+
 --Вывести количество тех, кто заказывал TWIX.
 
 SELECT DISTINCT
@@ -86,15 +93,4 @@ FROM Operations
 INNER JOIN Dishes d ON d.Dishes_id = Operations.Dish_id
 ORDER BY Operations.Dish_id;
 
--- Вывести количество блюд, которые можно заказать
-
-    SELECT
-        'Dishes' AS table_name,
-        count(*) AS cnt
-    FROM Dishes
-    UNION ALL
-    SELECT
-        'Customer' AS table_name,
-        count(*) AS cnt
-    FROM Customer
 

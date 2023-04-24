@@ -4,13 +4,13 @@ insert into Customer
 	values (1, 'Гаврилин Александр', '2002-12-25 17:00:00');
 	
 insert into Customer
-	values (2, 'Эшман Григорий', '1996-12-01 11:15:00');
+	values (2, 'Эшман Григорий', '2005-12-01 11:15:00');
 	
 insert into Customer
 	values (3, 'Шашлова Настасья', '1963-01-07 12:00:00');
 
 insert into Customer
-	values (4, 'Вольпова Маргарита', '1976-09-20 22:30:00');
+	values (4, 'Вольпова Маргарита', '2009-09-20 22:30:00');
 
 insert into Customer
 	values (5, 'Мосяков Григорий', '1989-08-04 05:30:00');
@@ -22,7 +22,7 @@ insert into Customer
 	values (7, 'Закрятин Роман', '1995-12-24 19:00:00');
 
 insert into Customer
-	values (8, 'Ярмоленко Ярмоленко', '1989-10-26 11:30:00');
+	values (8, 'Ярмоленко Виталя', '2011-10-26 11:30:00');
 
 insert into Customer
 	values (9, 'Чежеков Евгений', '1979-09-25 12:00:00');
@@ -268,7 +268,7 @@ insert into Restaurant_ban_list
     values(4, 14, 2, '2023-09-19 15:30:00');
 insert into Restaurant_ban_list
     values(5, 13, 1, '2022-02-11 16:00:00');
-	
+	--1,3,4,6,7
 insert into Operations
     values(1, 1, 4, 25, null, 17);
 insert into Operations
@@ -322,11 +322,11 @@ insert into Operations
 insert into Operations
     values(26, 11, 5, 14, null, 12);
 insert into Operations
-    values(27, 9, 4, 21, 7, 15);
+    values(27, 9, 4, 13, 7, 15);
 insert into Operations
     values(28, 10, 7, 3, 13, 7);
 insert into Operations
-    values(29, 13, 6, 12, 8, 18);
+    values(29, 13, 6, 13, 8, 18);
 insert into Operations
     values(30, 3, 5, 17, null, 20);
 insert into Operations

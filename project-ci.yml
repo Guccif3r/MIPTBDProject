@@ -81,8 +81,8 @@ tasks from 3rd to 11th:
     - echo "Table 'Operations' contains rows:"
     - python3 ${PYPSQL} --sql="SELECT * FROM workspace.Operations" --verbose
 
-#     - echo -e "${LIGHT_RED}>>> Task №6-7 <<<${NO_COLOUR}"
-#     - SCRIPT_PATH="${SCRIPTS_DIR}/select_count_tables.sql" pytest ${TESTS_DIR}/test_select_count.py
+    - echo -e "${LIGHT_RED}>>> Task №6-7 <<<${NO_COLOUR}"
+    - SCRIPT_PATH="${SCRIPTS_DIR}/delivery_select.sql" pytest ${TESTS_DIR}/test_select_count.py
 
 #     - echo -e "${LIGHT_RED}>>> Task №9 <<<${NO_COLOUR}"
 

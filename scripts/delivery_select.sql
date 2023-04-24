@@ -8,7 +8,7 @@ SELECT DISTINCT
 FROM Customer
         INNER JOIN Operations ON Operations.Customer_id = Customer.Customer_id
 WHERE
-        Customer.birth_dt < '2006-01-01 00:00:00';
+        Customer.birth_dt > '2005-01-01 00:00:00';
 
 
 --Вывести количество тех, кто заказывал TWIX.

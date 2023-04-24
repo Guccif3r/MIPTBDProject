@@ -91,6 +91,6 @@ d.dish_nm, Operations.Restaurant_id, Operations.Dish_id,
 LEAD(Operations.Dish_id) OVER (PARTITION BY Operations.Restaurant_id ORDER BY Operations.Dish_id)
 FROM Operations
 INNER JOIN Dishes d ON d.Dishes_id = Operations.Dish_id
-ORDER BY Operations.Dish_id;
+ORDER BY Operations.Dish_id;*/
 
 

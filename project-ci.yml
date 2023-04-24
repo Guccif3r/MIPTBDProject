@@ -90,8 +90,8 @@ tasks from 3rd to 11th:
     - echo -e "${LIGHT_RED}>>> Task №9 <<<${NO_COLOUR}"
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_views.sql"
 
-#     - echo -e "${LIGHT_RED}>>> Task №10 <<<${NO_COLOUR}"
-
+    - echo -e "${LIGHT_RED}>>> Task №10 <<<${NO_COLOUR}"
+    - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/delivery_procedures.sql"
 
 # task 12th:
 #   stage: tasks

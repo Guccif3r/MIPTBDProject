@@ -2,13 +2,16 @@ SET search_path = workspace;
 
 --Вывести количество заказчиков младше 18 лет
 
-SELECT DISTINCT
+WITH namesCust AS (SELECT DISTINCT
+                       (customer_nm)
+                   FROM Operations
+                            INNER JOIN Customer ON Operations.Customer_id = Customer.Customer_id
+                   WHERE
+                           Customer.birth_dt > '2005-01-01 00:00:00')
+SELECT
     'Customer' AS table_name,
-    count(customer_nm) AS cnt
-FROM Customer
-        INNER JOIN Operations ON Operations.Customer_id = Customer.Customer_id
-WHERE
-        Customer.birth_dt > '2005-01-01 00:00:00';
+    count(*) AS cnt
+FROM namesCust
 
 
 --Вывести количество тех, кто заказывал TWIX.

@@ -84,7 +84,7 @@ tasks from 3rd to 11th:
     - echo -e "${LIGHT_RED}>>> Task №6-7 <<<${NO_COLOUR}"
     - SCRIPT_PATH="${SCRIPTS_DIR}/delivery_select.sql" pytest ${TESTS_DIR}/test_select_count.py
 
-#     - echo -e "${LIGHT_RED}>>> Task №9 <<<${NO_COLOUR}"
+    - echo -e "${LIGHT_RED}>>> Task №9 <<<${NO_COLOUR}"
 
 #     - echo -e "${LIGHT_RED}>>> Task №10 <<<${NO_COLOUR}"
 
